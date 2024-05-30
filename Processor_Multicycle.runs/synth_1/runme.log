@@ -1,0 +1,632 @@
+
+*** Running vivado
+    with args -log Processor.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Processor.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source Processor.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 384.922 ; gain = 68.121
+Command: read_checkpoint -auto_incremental -incremental D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/utils_1/imports/synth_1/Processor.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/utils_1/imports/synth_1/Processor.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Processor -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9756
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1225.152 ; gain = 407.918
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Processor' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Processor/Processor.vhd:26]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Datapath' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:30' bound to instance 'DataPath_MultiCycle' of component 'Datapath' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Processor/Processor.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'Datapath' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:59]
+	Parameter N bound to: 32 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Rg' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:11' bound to instance 'PC' of component 'Rg' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:246]
+INFO: [Synth 8-638] synthesizing module 'Rg' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:23]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Rg' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:23]
+	Parameter N bound to: 6 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'ROM' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/ROM.vhd:13' bound to instance 'InstructionMemory' of component 'ROM' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:256]
+INFO: [Synth 8-638] synthesizing module 'ROM' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/ROM.vhd:26]
+	Parameter N bound to: 6 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ROM' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/ROM.vhd:26]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'adder_p4' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/adder_PCp4.vhd:12' bound to instance 'PCplus4' of component 'adder_p4' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'adder_p4' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/adder_PCp4.vhd:21]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder_p4' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/adder_PCp4.vhd:21]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'adder_p4' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/adder_PCp4.vhd:12' bound to instance 'PCplus8' of component 'adder_p4' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:270]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'mux3to1' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux3to1.vhd:12' bound to instance 'PCsource' of component 'mux3to1' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:277]
+INFO: [Synth 8-638] synthesizing module 'mux3to1' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux3to1.vhd:24]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux3to1' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux3to1.vhd:24]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'mux2to1' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux2to1.vhd:12' bound to instance 'SelectRA1' of component 'mux2to1' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:287]
+INFO: [Synth 8-638] synthesizing module 'mux2to1' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux2to1.vhd:23]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2to1' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux2to1.vhd:23]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'mux2to1' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux2to1.vhd:12' bound to instance 'SelectRA2' of component 'mux2to1' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:296]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'mux2to1' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux2to1.vhd:12' bound to instance 'SelectWA' of component 'mux2to1' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:305]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'mux2to1' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux2to1.vhd:12' bound to instance 'SelectWD' of component 'mux2to1' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:314]
+INFO: [Synth 8-638] synthesizing module 'mux2to1__parameterized2' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux2to1.vhd:23]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2to1__parameterized2' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux2to1.vhd:23]
+	Parameter N bound to: 4 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regfile' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_file_w_PC.vhd:21' bound to instance 'RegisterFile' of component 'regfile' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:323]
+INFO: [Synth 8-638] synthesizing module 'regfile' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_file_w_PC.vhd:41]
+	Parameter N bound to: 4 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+	Parameter N bound to: 4 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'regfile_core' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_file_core.vhd:18' bound to instance 'rf' of component 'regfile_core' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_file_w_PC.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'regfile_core' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_file_core.vhd:37]
+	Parameter N bound to: 4 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'regfile_core' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_file_core.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'regfile' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_file_w_PC.vhd:41]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'mux2to1' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux2to1.vhd:12' bound to instance 'ALUSourceB' of component 'mux2to1' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:337]
+	Parameter inbits bound to: 24 - type: integer 
+	Parameter zerobits bound to: 12 - type: integer 
+	Parameter signbits bound to: 26 - type: integer 
+	Parameter outbits bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Extend' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/Extend.vhd:17' bound to instance 'ZeroSignExtend' of component 'Extend' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:346]
+INFO: [Synth 8-638] synthesizing module 'Extend' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/Extend.vhd:33]
+	Parameter inbits bound to: 24 - type: integer 
+	Parameter zerobits bound to: 12 - type: integer 
+	Parameter signbits bound to: 26 - type: integer 
+	Parameter outbits bound to: 32 - type: integer 
+	Parameter in_width bound to: 12 - type: integer 
+	Parameter out_width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'zero_extend' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/zero_extension_param.vhd:12' bound to instance 'ZeroExt_imm12' of component 'zero_extend' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/Extend.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'zero_extend' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/zero_extension_param.vhd:25]
+	Parameter in_width bound to: 12 - type: integer 
+	Parameter out_width bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'zero_extend' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/zero_extension_param.vhd:25]
+	Parameter in_width bound to: 26 - type: integer 
+	Parameter out_width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'sign_extend' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/sign_extension_param.vhd:14' bound to instance 'SignExt_imm24x4' of component 'sign_extend' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/Extend.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'sign_extend' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/sign_extension_param.vhd:27]
+	Parameter in_width bound to: 26 - type: integer 
+	Parameter out_width bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'sign_extend' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/sign_extension_param.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Extend' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/Extend.vhd:33]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'Rg' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:11' bound to instance 'CPSR' of component 'Rg' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:360]
+INFO: [Synth 8-638] synthesizing module 'Rg__parameterized1' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:23]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Rg__parameterized1' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:23]
+	Parameter width bound to: 32 - type: integer 
+	Parameter shamt bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'ALU' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ALU.vhd:17' bound to instance 'ALUblock' of component 'ALU' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:370]
+INFO: [Synth 8-638] synthesizing module 'ALU' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ALU.vhd:37]
+	Parameter width bound to: 32 - type: integer 
+	Parameter shamt bound to: 5 - type: integer 
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'ADD_SUB' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ADD_SUB.vhd:12' bound to instance 'AddSub' of component 'ADD_SUB' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ALU.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'ADD_SUB' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ADD_SUB.vhd:25]
+	Parameter N bound to: 32 - type: integer 
+WARNING: [Synth 8-7193] Integer conversion function is truncating input [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ADD_SUB.vhd:44]
+WARNING: [Synth 8-7193] Integer conversion function is truncating input [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ADD_SUB.vhd:44]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'adder' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/add.vhd:11' bound to instance 'add' of component 'adder' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ADD_SUB.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'adder' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/add.vhd:23]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/add.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'ADD_SUB' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ADD_SUB.vhd:25]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'ANDD' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/AND.vhd:11' bound to instance 'AndLogic' of component 'ANDD' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ALU.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'ANDD' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/AND.vhd:21]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ANDD' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/AND.vhd:21]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'XORR' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/XOR.vhd:11' bound to instance 'XorLogic' of component 'XORR' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ALU.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'XORR' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/XOR.vhd:21]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'XORR' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/XOR.vhd:21]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'MOV_MVN' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/MOV_MVN.vhd:11' bound to instance 'MovMvn' of component 'MOV_MVN' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ALU.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'MOV_MVN' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/MOV_MVN.vhd:21]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MOV_MVN' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/MOV_MVN.vhd:21]
+	Parameter N bound to: 32 - type: integer 
+	Parameter IMM bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'LSL' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/LSL.vhd:13' bound to instance 'LeftShift_L' of component 'LSL' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ALU.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'LSL' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/LSL.vhd:27]
+	Parameter N bound to: 32 - type: integer 
+	Parameter IMM bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'LSL' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/LSL.vhd:27]
+	Parameter N bound to: 32 - type: integer 
+	Parameter IMM bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'ASR' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ASR.vhd:13' bound to instance 'RightShift_A' of component 'ASR' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ALU.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'ASR' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ASR.vhd:27]
+	Parameter N bound to: 32 - type: integer 
+	Parameter IMM bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ASR' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ASR.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/ALU/ALU.vhd:37]
+	Parameter N bound to: 5 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'RAM' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/RAM.vhd:19' bound to instance 'DataMemory' of component 'RAM' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:384]
+INFO: [Synth 8-638] synthesizing module 'RAM' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/RAM.vhd:35]
+	Parameter N bound to: 5 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'RAM' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/RAM.vhd:35]
+	Parameter N bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'mux2to1' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/combinational_logic_elements/mux2to1.vhd:12' bound to instance 'ResultSource' of component 'mux2to1' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:394]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Rg' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:11' bound to instance 'IRrg' of component 'Rg' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:407]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Rg' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:11' bound to instance 'PCp4rg' of component 'Rg' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:417]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Rg' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:11' bound to instance 'Arg' of component 'Rg' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:427]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Rg' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:11' bound to instance 'Brg' of component 'Rg' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:437]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Rg' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:11' bound to instance 'IMrg' of component 'Rg' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:447]
+	Parameter width bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'Rg' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:11' bound to instance 'MArg' of component 'Rg' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:457]
+INFO: [Synth 8-638] synthesizing module 'Rg__parameterized4' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:23]
+	Parameter width bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Rg__parameterized4' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:23]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Rg' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:11' bound to instance 'WDrg' of component 'Rg' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:467]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Rg' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:11' bound to instance 'Srg' of component 'Rg' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:477]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Rg' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/state_elements/register_param_rst_we.vhd:11' bound to instance 'RDrg' of component 'Rg' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:487]
+INFO: [Synth 8-256] done synthesizing module 'Datapath' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Datapath/Datapath.vhd:59]
+INFO: [Synth 8-3491] module 'Control' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit/Control.vhd:14' bound to instance 'ControlUnit_MultiCycle' of component 'Control' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Processor/Processor.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'Control' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit/Control.vhd:40]
+INFO: [Synth 8-3491] module 'InstrDec' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit_Components/Instruction_Decoder.vhd:10' bound to instance 'InstructionDecoder' of component 'InstrDec' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit/Control.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'InstrDec' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit_Components/Instruction_Decoder.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'InstrDec' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit_Components/Instruction_Decoder.vhd:25]
+INFO: [Synth 8-3491] module 'CONDLogic' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit_Components/Conditional_Logic.vhd:11' bound to instance 'ConditionalLogic' of component 'CONDLogic' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit/Control.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'CONDLogic' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit_Components/Conditional_Logic.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'CONDLogic' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit_Components/Conditional_Logic.vhd:26]
+INFO: [Synth 8-3491] module 'FSM' declared at 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit_Components/FSM.vhd:10' bound to instance 'StateMachineWE' of component 'FSM' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit/Control.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'FSM' [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit_Components/FSM.vhd:31]
+INFO: [Synth 8-226] default block is never used [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit_Components/FSM.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit_Components/FSM.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'Control' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Control_Unit/Control.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Processor' (0#1) [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sources_1/Processor/Processor.vhd:26]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1319.148 ; gain = 501.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1319.148 ; gain = 501.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1319.148 ; gain = 501.914
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1319.148 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc]
+Finished Parsing XDC File [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Processor_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Processor_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1381.098 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1381.098 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1381.098 ; gain = 563.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1381.098 ; gain = 563.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IOB = TRUE for PC[5]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for PC[4]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for PC[3]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for PC[2]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for PC[1]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for PC[0]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[31]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[30]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[29]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[28]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[27]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[26]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[25]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[24]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[23]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[22]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[21]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[20]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[19]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[18]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[17]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[16]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[15]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[14]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[13]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[12]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[11]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[10]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[9]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[8]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[7]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[6]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[5]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[4]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[3]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[2]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[1]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Instruction[0]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[31]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[30]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[29]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[28]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[27]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[26]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[25]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[24]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[23]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[22]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[21]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[20]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[19]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[18]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[17]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[16]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[15]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[14]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[13]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[12]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[11]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[10]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[9]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[8]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[7]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[6]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[5]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[4]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[3]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[2]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[1]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for ALUResult[0]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[31]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[30]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[29]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[28]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[27]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[26]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[25]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[24]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[23]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[22]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[21]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[20]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[19]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[18]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[17]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[16]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[15]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[14]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[13]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[12]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[11]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[10]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[9]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[8]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[7]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[6]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[5]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[4]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[3]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[2]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[1]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for WriteData[0]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[31]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[30]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[29]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[28]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[27]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[26]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[25]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[24]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[23]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[22]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[21]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[20]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[19]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[18]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[17]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[16]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[15]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[14]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[13]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[12]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[11]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[10]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[9]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[8]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[7]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[6]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[5]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[4]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[3]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[2]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[1]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+Applied set_property IOB = TRUE for Result[0]. (constraint file  D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/constrs_1/new/Processor.xdc, line 15).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1381.098 ; gain = 563.863
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'FSM'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s0 |                             0000 |                             0000
+                      s1 |                             0001 |                             0001
+          s4_condexnegtv |                             0010 |                             1001
+                    s2_b |                             0011 |                             0010
+                   s2_bl |                             0100 |                             0011
+                  s2_cmp |                             0101 |                             0100
+                   s2_dp |                             0110 |                             0101
+                   s4_dp |                             0111 |                             1010
+                 s4_dppc |                             1000 |                             1011
+                  s4_sdp |                             1001 |                             1100
+                s4_sdppc |                             1010 |                             1101
+                  s2_mem |                             1011 |                             0110
+                  s3_str |                             1100 |                             1000
+                  s3_ldr |                             1101 |                             0111
+                  s4_ldr |                             1110 |                             1110
+                s4_ldrpc |                             1111 |                             1111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'FSM'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1381.098 ; gain = 563.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   34 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 9     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 8     
+	   2 Input    4 Bit        Muxes := 3     
+	  12 Input    4 Bit        Muxes := 1     
+	  29 Input    4 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	  16 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 5     
+	  16 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1381.098 ; gain = 563.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Processor   | DataPath_MultiCycle/DataMemory/RAM_reg | 32 x 32(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+--------------------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                                 | Inference | Size (Depth x Width) | Primitives   | 
++------------+--------------------------------------------+-----------+----------------------+--------------+
+|Processor   | DataPath_MultiCycle/RegisterFile/rf/RF_reg | Implied   | 16 x 32              | RAM32M x 12  | 
++------------+--------------------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 1381.098 ; gain = 563.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 1444.707 ; gain = 627.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Processor   | DataPath_MultiCycle/DataMemory/RAM_reg | 32 x 32(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------+--------------------------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                                 | Inference | Size (Depth x Width) | Primitives   | 
++------------+--------------------------------------------+-----------+----------------------+--------------+
+|Processor   | DataPath_MultiCycle/RegisterFile/rf/RF_reg | Implied   | 16 x 32              | RAM32M x 12  | 
++------------+--------------------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance DataPath_MultiCycle/DataMemory/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance DataPath_MultiCycle/DataMemory/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:51 . Memory (MB): peak = 1445.773 ; gain = 628.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1445.773 ; gain = 628.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1445.773 ; gain = 628.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1445.773 ; gain = 628.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1445.773 ; gain = 628.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1445.773 ; gain = 628.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1445.773 ; gain = 628.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    34|
+|3     |LUT1     |     4|
+|4     |LUT2     |    12|
+|5     |LUT3     |    71|
+|6     |LUT4     |    67|
+|7     |LUT5     |   156|
+|8     |LUT6     |   282|
+|9     |RAM32M   |    10|
+|10    |RAM32X1D |     4|
+|11    |RAMB18E1 |     1|
+|12    |FDRE     |   329|
+|13    |IBUF     |     2|
+|14    |OBUF     |   134|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1445.773 ; gain = 628.539
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:54 . Memory (MB): peak = 1445.773 ; gain = 566.590
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:58 . Memory (MB): peak = 1445.773 ; gain = 628.539
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1457.621 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 49 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1461.289 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+Synth Design complete, checksum: 92a83dc8
+INFO: [Common 17-83] Releasing license: Synthesis
+124 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:15 . Memory (MB): peak = 1461.289 ; gain = 1051.512
+INFO: [Common 17-1381] The checkpoint 'D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.runs/synth_1/Processor.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Processor_utilization_synth.rpt -pb Processor_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 24 11:31:48 2024...

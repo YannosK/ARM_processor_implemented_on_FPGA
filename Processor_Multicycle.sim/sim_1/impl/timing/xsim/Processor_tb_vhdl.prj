@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../Processor_Multicycle.srcs/sim_1/new/Processor_tb.vhd" \
+"../../../../../Processor_Multicycle.srcs/sim_1/imports/ALU_tb.vhd" \
+"../../../../../Processor_Multicycle.srcs/sim_1/imports/regfile_tb.vhd" \
+"../../../../../Processor_Multicycle.srcs/sim_1/imports/Control_tb.vhd" \
+
+# Do not sort compile order
+nosort

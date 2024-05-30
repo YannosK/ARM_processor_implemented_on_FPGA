@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Processor_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Processor_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,339.960 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,407.441 ns"></ZoomEndTime>
+      <Cursor1Time time="1,407.440 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="180"></NameColumnWidth>
+      <ValueColumnWidth column_width="86"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="3" />
+   <wvobject fp_name="/Processor_tb/RESET" type="logic">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="group95" type="group">
+      <obj_property name="label">Outputs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/Processor_tb/PC" type="array">
+         <obj_property name="ElementShortName">PC[5:0]</obj_property>
+         <obj_property name="ObjectShortName">PC[5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/Instruction" type="array">
+         <obj_property name="ElementShortName">Instruction[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Instruction[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/ControlUnit_MultiCycle/InstructionDecoder/ALUControl" type="array">
+         <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/ControlUnit_MultiCycle/StateMachineWE/current_state" type="other">
+         <obj_property name="ElementShortName">current_state</obj_property>
+         <obj_property name="ObjectShortName">current_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/ControlUnit_MultiCycle/StateMachineWE/FlagsWrite" type="logic">
+         <obj_property name="ElementShortName">FlagsWrite</obj_property>
+         <obj_property name="ObjectShortName">FlagsWrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/DataPath_MultiCycle/ALUFlags" type="array">
+         <obj_property name="ElementShortName">ALUFlags[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUFlags[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/DataPath_MultiCycle/CPSRFlags" type="array">
+         <obj_property name="ElementShortName">CPSRFlags[3:0]</obj_property>
+         <obj_property name="ObjectShortName">CPSRFlags[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

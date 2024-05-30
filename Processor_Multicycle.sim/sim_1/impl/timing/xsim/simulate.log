@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+$stop called at time : 0 fs : File "D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sim_1/new/Processor_tb.vhd" Line 116
+$stop called at time : 2024100 ps : File "D:/Yannos/FILES/PROGRAMS/FPGA/VIVADO/MSc_Control_and_Computing-UoA/PROJECTS/Project_2/Processor_Multicycle/Processor_Multicycle.srcs/sim_1/new/Processor_tb.vhd" Line 127

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="regfile_tb_time_impl.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="regfile_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="453.080 ns"></ZoomStartTime>
+      <ZoomEndTime time="465.644 ns"></ZoomEndTime>
+      <Cursor1Time time="486.820 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="139"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wave_markers>
+      <marker time="461153" label="" />
+      <marker time="472360" label="" />
+      <marker time="479536" label="" />
+      <marker time="462720" label="" />
+      <marker time="453080" label="" />
+   </wave_markers>
+   <wvobject fp_name="/regfile_tb/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_tb/RegWrite" type="logic">
+      <obj_property name="ElementShortName">RegWrite</obj_property>
+      <obj_property name="ObjectShortName">RegWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_tb/uut/R15" type="array">
+      <obj_property name="ElementShortName">R15[31:0]</obj_property>
+      <obj_property name="ObjectShortName">R15[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider758">
+      <obj_property name="label">Read Port 1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_tb/A1" type="array">
+      <obj_property name="ElementShortName">A1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_tb/RD1" type="array">
+      <obj_property name="ElementShortName">RD1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RD1[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider758">
+      <obj_property name="label">Read Port 2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_tb/A2" type="array">
+      <obj_property name="ElementShortName">A2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">A2[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_tb/RD2" type="array">
+      <obj_property name="ElementShortName">RD2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RD2[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider758">
+      <obj_property name="label">Write ports</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_tb/A3" type="array">
+      <obj_property name="ElementShortName">A3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">A3[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_tb/WD3" type="array">
+      <obj_property name="ElementShortName">WD3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WD3[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
