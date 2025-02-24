@@ -1,0 +1,7 @@
+# test and temporary files
+ALUControl.md
+
+# unnecessary vivado project files
+Processor_Multicycle.cache
+Processor_Multicycle.ip_user_files
+Processor_Multicycle.hw
